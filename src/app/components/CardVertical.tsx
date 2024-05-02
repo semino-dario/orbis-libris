@@ -1,17 +1,23 @@
 import styles from '../page.module.css'
+import { StaticImageData } from 'next/image'; 
+
 
 interface CardVerticalProps {
-    mainImage: string,
-    title:string,
+  mainImage: string | StaticImageData,
+  title:string,
     description: string
 }
 
 const CardVertical: React.FC<CardVerticalProps> = ({ mainImage, title, description}) => {
-    return (
+  
+  const imageSource = typeof mainImage === 'string' ? mainImage : mainImage.src;
+
+  
+  return (
         <article className={`${styles.artv} ${styles.cardStyle}` }>
         <img
           className={styles.imgCard}
-          src={mainImage}
+          src={imageSource}
           alt=""
         />
         <div className={styles.contentVertical}>
