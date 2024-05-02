@@ -1,4 +1,40 @@
 .container{
+  /* font-sizes */
+--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+--fs-800: 3.5rem;
+--fs-700: 1.5rem;
+--fs-600: 1.5rem;
+--fs-500: 1rem;
+--fs-400: 0.9375rem;
+--fs-300: 1rem;
+--fs-200: 0.875rem;}
+
+@media (min-width: 45rem) {
+  .container {
+         /* font-sizes */
+  --fs-800: 5rem;
+  --fs-700: 2.3rem;
+  --fs-600: 1.7rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+
+
+  }
+}
+
+@media (min-width: 70rem) {
+  .container {
+      --fs-800: 6.25rem;
+      --fs-600: 1.7rem;
+      --fs-400: 1.125rem;
+      --fs-500: 1.75rem;
+
+  }
+}
+
+
+
+.container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 10px;
@@ -17,16 +53,22 @@
   overflow: hidden;
   border: 2px solid gray;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
 }
 
+.cardStyle:hover{
+  color: red;
+}
 
 .contentVertical{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   text-align: center;
   gap: 0.5rem;
+  padding: 1rem;
   padding-inline: 1rem;
 }
 
@@ -42,7 +84,7 @@
 
 
 .titleVertical{
-  font-size: 2rem;
+  font-size: var(--fs-600);
   font-family: sans-serif;
   font-weight: bold;
 }
@@ -50,7 +92,7 @@
 .cardTitle{
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: var(--fs-600);
   margin-bottom: -1%;
 }
 
@@ -73,8 +115,10 @@
  border-bottom: solid 3px white;
  margin-bottom: 1rem;
  display: flex;
+ flex-direction: column;
  align-items: center;
- justify-content: space-between;
+ justify-content: start;
+ gap: 1.5rem;
 }
 
 .siteTitle{
@@ -101,6 +145,13 @@ font-size: 1.3rem;
 
 .about{
   font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.about:hover{
+  color:red;
 }
 
 .footer{
@@ -153,12 +204,21 @@ font-size: 1.3rem;
 
 }
 
-@media(min-width: 45rem){
+@media(min-width: 56rem){
 
   .container{
       grid-auto-rows: 18rem;
- 
   }
+
+  .contentVertical{
+    padding-top: 0;
+    gap:0;
+  }
+
+.header{
+flex-direction: row;
+justify-content: space-between;
+}
 
 .art1{
   grid-column: span 6;
@@ -195,7 +255,9 @@ font-size: 1.3rem;
       grid-auto-rows: 16rem;
 
   }
-
+.contentVertical{
+  justify-content: center;
+}
 
 
   .art1{

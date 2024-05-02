@@ -11,6 +11,9 @@ import milManos from "./components/images/mil-manos.jpeg"
 import reina from "./components/images/reina.png"
 import vautrin from "./components/images/vautrin.png"
 import oski from "./components/images/oski.jpeg"
+import guarda from "./components/images/hoja-de-guarda.png"
+import Footer from "./components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,7 +24,7 @@ export default function Home() {
       <h1 className={styles.siteName}>ORBIS LIBRIS</h1>
       <p className={styles.siteSubTitle}>Libros de cualquier tiempo y lugar</p>
       </div>
-      <p className={styles.about}>¿qué y quién?</p>
+      <Link href="./acerca" className={styles.about}>¿qué y quién?</Link>
       </header>
       <Card
       cardType={styles.art2} 
@@ -89,11 +92,9 @@ export default function Home() {
       description="Voces y dioses en Freshwater de Akwaeke Emezi"
       mainImage={emezi}
      />
-     <div className={styles.footer}>
-     <img className={styles.closeImage} src="https://orbislibris.com/wp-content/uploads/2021/04/cropped-hoja-de-guarda-piscodelica.png" alt="" />
-     <p className={styles.footerText}>
-     Orbis Libris es un sitio creado y administrado por Darío Semino. En la sección de información del sitio se muestra una foto de la hoja de guarda típica de la colección de libros Robin Hood, con la cual muchas generaciones se iniciaron en la lectura, la foto está tomada de Los Tigre de la Malasia  de Emilio Salgari. Orbis Libris comenzó a estar en línea en el mes de abril de MMXXI, segundo año de la Gran Pandemia que asoló el orbe y le recordó a los frágiles humanos el consuelo de los libros.     </p>
-     </div>
+     <Footer
+     mainImage={guarda}
+     />
       </main>
   );
 }
