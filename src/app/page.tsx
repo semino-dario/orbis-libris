@@ -40,7 +40,7 @@ export default function Home() {
       />
       <div className={`${styles.cita} ${styles.art2}`}>
         <p>
-        Lo desconocido es una abstracción; lo conocido, un desierto; pero lo conocido a medias, lo vislumbrado, es el lugar perfecto para hacer ondular deseo y alucinación.
+        "Lo desconocido es una abstracción; lo conocido, un desierto; pero lo conocido a medias, lo vislumbrado, es el lugar perfecto para hacer ondular deseo y alucinación."
         </p>
         <p>
           Juan José Saer, El Entenado</p>
