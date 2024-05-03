@@ -1,27 +1,14 @@
-import { StaticImageData } from "next/image"
+import { PublicImages } from "../components/PublicImage";
 import dawnBook from "../components/images/dawn-book.jpeg"
 
-interface PublicImagesProps {
 
-    image : StaticImageData
+export default function Images () {
+
+return (
+    <div>
+        <PublicImages
+        image={dawnBook}
+        />
+    </div>
+)
 }
-
-
-export const PublicImages: React.FC<PublicImagesProps> = ({image}) => {
-   
-    image = dawnBook
-
-
-    const imageSource = typeof image === 'string' ? image : image.src;
-
-
-    return(
-
-        <div>
-            <img src={imageSource} alt="imagen" />
-        </div>
-
-    )
-}
-
-
