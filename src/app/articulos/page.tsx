@@ -26,7 +26,7 @@ const Articulo: React.FC<ArticuloProps> = ({title, description, mainContent, ima
         <div className={styles.containerTexts}>
             <Header/>
         <main className={styles.containerArticle}>
-            <img src={imageSource} alt="" />
+            <img src={imageSource} alt="imagen del artículo" />
             <header className={styles.hedaerArticle}>
                 <h1>{title}</h1>
                 <p>{description}</p>

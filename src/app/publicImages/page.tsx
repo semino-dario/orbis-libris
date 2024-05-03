@@ -18,7 +18,7 @@ const PublicImages: React.FC<PublicImagesProps> = ({image}) => {
     return(
 
         <div>
-            <img src={imageSource} alt="" />
+            <img src={imageSource} alt="imagen" />
         </div>
 
     )
