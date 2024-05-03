@@ -30,13 +30,13 @@ export default function Home() {
       cardType={styles.art2} 
       title="Todo de nuevo desde el principio"
       description="Una nueva historia de los orígenes de la civilización en The Dawn of Everything de David Graeber y David Wengrow"
-      mainImage={dawn}
+      mainImage="https://res.cloudinary.com/dsw6fpqoz/image/upload/fl_preserve_transparency/v1714766089/dawn_ul5a8p.jpg?_s=public-apps"
       />
        <Card
       cardType={styles.art2}
       title="¿Se murió la literatura?"
       description="En torno a El Adiós a la literatura – Historia de una desvalorización – siglos XVIII -XX de William Marx"
-      mainImage={marx}
+      mainImage="https://res.cloudinary.com/dsw6fpqoz/image/upload/v1714766380/marx_fyutpn.jpg"
       />
       <div className={`${styles.cita} ${styles.art2}`}>
         <p>
