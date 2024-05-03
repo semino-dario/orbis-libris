@@ -7,7 +7,7 @@ interface PublicImagesProps {
 }
 
 
-const PublicImages: React.FC<PublicImagesProps> = ({image}) => {
+export const PublicImages: React.FC<PublicImagesProps> = ({image}) => {
    
     image = dawnBook
 
@@ -24,5 +24,4 @@ const PublicImages: React.FC<PublicImagesProps> = ({image}) => {
     )
 }
 
-export default PublicImages
 
