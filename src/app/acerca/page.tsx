@@ -1,16 +1,12 @@
 import Link from 'next/link'
 import styles from '../../app/page.module.css'
 import LinkButton from '../components/LinkButton'
+import Header from '../components/Header'
 
 export default function Acerca () {
     return(
-        <main className={styles.containerAcerca}>
-     <header>
-      <div className={styles.siteTitle}>
-     <Link className={styles.link} href='/'> <h1 className={styles.siteName}>ORBIS LIBRIS</h1> </Link>
-      <p className={styles.siteSubTitle}>Libros de cualquier tiempo y lugar</p>
-      </div>
-      </header>
+        <main className={styles.containerTexts}>
+            <Header/>
            <article className={styles.aboutText}>
             <h1>¿Qué?</h1>
             <p>
