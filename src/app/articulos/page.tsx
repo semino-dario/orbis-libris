@@ -4,7 +4,7 @@ import dawn from '../components/images/dawn.png'
 import styles from '../page.module.css'
 import content from '../content.json'
 
-interface ArticuloProps {
+interface Props {
     title: string,
     description: string,
     mainContent: string,
@@ -12,7 +12,7 @@ interface ArticuloProps {
     image: string | StaticImageData,
 }
 
-const Articulo: React.FC<ArticuloProps> = ({title, description, mainContent, image, date}) => {
+const Articulo: React.FC<Props> = ({title, description, mainContent, image, date}) => {
     
     image = dawn
     date= content.article2.content.date
