@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from '../../app/page.module.css'
 import LinkButton from '../components/LinkButton'
 import Header from '../components/Header'
