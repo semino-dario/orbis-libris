@@ -12,7 +12,7 @@ interface ArticuloProps {
     image: string | StaticImageData,
 }
 
-export const Articulo: React.FC<ArticuloProps> = ({title, description, mainContent, image, date}) => {
+const Articulo: React.FC<ArticuloProps> = ({title, description, mainContent, image, date}) => {
     
     image = dawn
     date= content.article2.content.date
@@ -40,3 +40,4 @@ export const Articulo: React.FC<ArticuloProps> = ({title, description, mainConte
     )
 }
 
+export default Articulo
