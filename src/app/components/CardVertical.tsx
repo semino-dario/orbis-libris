@@ -1,20 +1,22 @@
+import Link from 'next/link';
 import styles from '../page.module.css'
 import { StaticImageData } from 'next/image'; 
 
 
 interface CardVerticalProps {
-  mainImage: string | StaticImageData,
-  title:string,
+  mainImage: string | StaticImageData
+  title:string
     description: string
+    link:string
 }
 
-const CardVertical: React.FC<CardVerticalProps> = ({ mainImage, title, description}) => {
+const CardVertical: React.FC<CardVerticalProps> = ({ mainImage, title, description, link}) => {
   
   const imageSource = typeof mainImage === 'string' ? mainImage : mainImage.src;
 
   
   return (
-        <article className={`${styles.artv} ${styles.cardStyle}` }>
+        <Link href={`articulos/${link}`} className={`${styles.artv} ${styles.cardStyle} ${styles.offDecoration}` }>
         <img
           className={styles.imgCard}
           src={imageSource}
@@ -26,7 +28,7 @@ const CardVertical: React.FC<CardVerticalProps> = ({ mainImage, title, descripti
             {description}
           </p>
         </div>
-      </article>
+      </Link>
     )
 }
 

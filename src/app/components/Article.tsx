@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image'
 import Header from '../components/Header'
 import styles from '../page.module.css'
+import { isAbsolute } from 'path'
 
 interface ArticleProps {
     title: string,
@@ -18,7 +19,7 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
         <div className={styles.containerTexts}>
             <Header/>
         <main className={styles.containerArticle}>
-            <img src="https://res.cloudinary.com/dsw6fpqoz/image/upload/fl_preserve_transparency/v1714766089/dawn_ul5a8p.jpg?_s=public-apps" alt="imagen del artículo" />
+            <img src={imageSource} alt="imagen principal" />
             <header className={styles.hedaerArticle}>
                 <h1>{title}</h1>
                 <p>{description}</p>

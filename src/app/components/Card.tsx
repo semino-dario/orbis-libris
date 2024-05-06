@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '../page.module.css'
 import { StaticImageData } from 'next/image'; 
 
@@ -6,15 +7,16 @@ interface CardProps {
     title:string,
     description: string
     cardType:string
+    link:string
 }
 
-const Card: React.FC<CardProps> = ({ mainImage, title, description, cardType }) => {
+const Card: React.FC<CardProps> = ({ mainImage, title, description, cardType, link }) => {
   
   const imageSource = typeof mainImage === 'string' ? mainImage : mainImage.src;
-
   
   return (
-        <article className={`${cardType} ${styles.cardStyle}` }>
+
+        <Link href={`articulos/${link}`} className={`${cardType} ${styles.cardStyle} ${styles.offDecoration}` }>
         <img
           className={styles.imgCard}
           src={imageSource}
@@ -26,7 +28,7 @@ const Card: React.FC<CardProps> = ({ mainImage, title, description, cardType }) 
             {description}
           </p>
         </div>
-      </article>
+      </Link>
     )
 }
 
