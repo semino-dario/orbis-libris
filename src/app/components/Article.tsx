@@ -1,7 +1,6 @@
 import { StaticImageData } from 'next/image'
 import Header from '../components/Header'
 import styles from '../page.module.css'
-import { isAbsolute } from 'path'
 
 interface ArticleProps {
     title: string,
@@ -26,7 +25,7 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
                 <span>- {date} -</span>
             </header>
             <article>
-          <div  dangerouslySetInnerHTML={{ __html: mainContent }} />
+          <div className={styles.textArticle} dangerouslySetInnerHTML={{ __html: mainContent }} />
             </article>
         </main>
         </div>

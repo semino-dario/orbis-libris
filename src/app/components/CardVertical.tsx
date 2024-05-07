@@ -24,9 +24,7 @@ const CardVertical: React.FC<CardVerticalProps> = ({ mainImage, title, descripti
         />
         <div className={styles.contentVertical}>
           <p className={styles.titleVertical}>{title}</p>
-          <p className={styles.cardText}>
-            {description}
-          </p>
+          <p className={styles.cardText} dangerouslySetInnerHTML={ {__html: description}} /> 
         </div>
       </Link>
     )

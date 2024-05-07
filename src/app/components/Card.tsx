@@ -24,9 +24,7 @@ const Card: React.FC<CardProps> = ({ mainImage, title, description, cardType, li
         />
         <div className={styles.cardContent}>
           <p className={styles.cardTitle}>{title}</p>
-          <p className={styles.cardText}>
-            {description}
-          </p>
+          <p className={styles.cardText} dangerouslySetInnerHTML={{ __html: description }} />
         </div>
       </Link>
     )
