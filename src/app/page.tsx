@@ -81,7 +81,7 @@ export default function Home() {
       title="Una novela escrita a mil manos"
       description="El Siglo XVIII en Francia, las Luces y sus egos en <i><strong>Las Pasiones Intelectuales</i></strong> de Élisabeth Badinter"
       mainImage={milManos}
-      link="articulos/2"
+      link="una-novela-escrita-a-mil-manos"
 
      />
      <Card
@@ -113,6 +113,8 @@ export default function Home() {
      mainImage={guarda}
      />
       </main>
+
+     
       </div>
   );
 }
