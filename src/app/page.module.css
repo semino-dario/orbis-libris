@@ -25,7 +25,7 @@
 @media (min-width: 70rem) {
   .container {
       --fs-800: 6.25rem;
-      --fs-600: 1.7rem;
+      --fs-600: 1.6rem;
       --fs-400: 1.125rem;
       --fs-500: 1.75rem;
 
@@ -99,7 +99,7 @@
 .cardText{
   font-family: sans-serif;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 1.5px;
   line-height: 1.3rem;
 }
@@ -222,6 +222,7 @@ font-size: 1rem;
 .offDecoration{
   text-decoration: none;
 }
+
 
 @media(min-width: 56rem){
 
