@@ -314,6 +314,15 @@ margin-inline: 0.4rem;
   font-family:'Gill Sans';
 }
 
+.textArticle > a{
+  text-decoration: none;
+  color:red;
+}
+
+.textArticle > a:hover{
+  color:white;
+}
+
 .imgArticle{
   width: 90%;
 }

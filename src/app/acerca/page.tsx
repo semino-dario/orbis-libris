@@ -1,6 +1,8 @@
 import styles from '../../app/page.module.css'
 import LinkButton from '../components/LinkButton'
 import Header from '../components/Header'
+import Link from 'next/link'
+import guarda from "../components/images/hoja-de-guarda.png"
 
 export default function Acerca () {
     return(

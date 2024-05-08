@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import styles from '../page.module.css'
 import Footer from './Footer'
 import guarda from "./images/hoja-de-guarda.png"
+import Link from 'next/link'
 
 interface ArticleProps {
     title: string,
@@ -27,7 +28,7 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
                 <span>- {date} -</span>
             </header>
           <div className={styles.textArticle} dangerouslySetInnerHTML={{ __html: mainContent }} />
-            <img src={guarda.src} className={styles.closeImage} alt="" />
+          <Link href="/" className={styles.closeImage} >  <img src={guarda.src} className={styles.closeImage} alt="" /></Link>
             <p className={styles.footerArticle}>Salvo que se indique lo contrario todos los textos de Orbis Libris fueron escritos por <a href="https://www.linkedin.com/in/dario-semino/" target="_blank" className={`${styles.offDecoration} ${styles.colorRed}`}> Darío Semino</a>. Para contactarse se puede escribir a orbislibriscontacto@gmail.com</p>
         </main>
         </div>
