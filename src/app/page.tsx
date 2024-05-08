@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Link from "next/link";
 
 export default function Home() {
+
   return (
     <div className={styles.mainContainer}>
       <header className={styles.header}>
@@ -25,6 +26,7 @@ export default function Home() {
       </header>
    <main className={styles.container}>
       <Card
+   
       cardType={styles.art2} 
       title="Todo de nuevo desde el principio"
       description="Una nueva historia de los orígenes de la civilización en <strong><i>The Dawn of Everything</i></strong> de David Graeber y David Wengrow"
