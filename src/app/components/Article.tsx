@@ -22,7 +22,7 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
         <main className={styles.containerArticle}>
             <img src={imageSource} alt="imagen principal" />
             <header className={styles.hedaerArticle}>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
                 <p dangerouslySetInnerHTML={{ __html: description}}/>
                 <span>- {date} -</span>
             </header>

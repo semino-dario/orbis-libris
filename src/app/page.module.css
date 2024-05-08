@@ -312,12 +312,18 @@ margin-inline: 0.4rem;
 .textArticle{
   font-size: 1.1rem;
   font-family:'Gill Sans';
+  padding-inline: 5px;
 
+}
+
+.imgArticle{
+  width: 90%;
 }
 
 .footerArticle{
 text-align: center;
 }
+
 
 
 @media(min-width: 56rem){
