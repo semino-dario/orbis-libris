@@ -73,7 +73,9 @@ export default function Home() {
       title="Cinabrio, psicoducto, misterio"
       description="Una ciudad devorada por la selva en <i><strong>La Reina Roja, una tumba real</i></strong> de Arnoldo González Cruz"
       mainImage={reina}
-      link="articulos/2"
+      link="cinabrio-psicoducto-misterio"
+      imgPosition={styles.imgLeft}
+
 
      />
      <Card
@@ -82,6 +84,8 @@ export default function Home() {
       description="El Siglo XVIII en Francia, las Luces y sus egos en <i><strong>Las Pasiones Intelectuales</i></strong> de Élisabeth Badinter"
       mainImage={milManos}
       link="una-novela-escrita-a-mil-manos"
+      imgPosition={styles.imgLeft}
+
 
      />
      <Card
@@ -98,6 +102,8 @@ export default function Home() {
       description="Historia de la naturaleza en <i><strong>El velo de Isis</i></strong> de Pierre Hadot"
       mainImage={isis} 
       link="la-lectura-como-modo-de-vida"
+      imgPosition={styles.imgTop}
+
 
       />
 
@@ -107,13 +113,14 @@ export default function Home() {
       description="Voces y dioses en <i><strong>Freshwater</i></strong> de Akwaeke Emezi"
       mainImage={emezi}
       link="su-alma-es-legion"
-
+      imgPosition={styles.imgRight}
      />
      <Footer
      mainImage={guarda}
      />
       </main>
-
+      <div>
+      </div>
      
       </div>
   );

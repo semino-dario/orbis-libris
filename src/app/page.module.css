@@ -45,7 +45,7 @@
     grid-gap: 15px;
     width: 95vw;
     margin: 0 auto;
-    grid-auto-rows: 350px;
+    grid-auto-rows: minmax(350px, 400px);
 }
 
 
@@ -70,11 +70,8 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
-  text-align: center;
   gap: 0.5rem;
   padding: 1rem;
-  padding-inline: 1rem;
 }
 
 
@@ -83,8 +80,8 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
-  padding-inline: 1rem;
+  padding: 1rem;
+  gap: 0.5rem;
 }
 
 
@@ -92,6 +89,8 @@
   font-size: var(--fs-600);
   font-family: sans-serif;
   font-weight: bold;
+  line-height: 2rem;
+
 }
 
 .cardTitle{
@@ -99,6 +98,7 @@
   font-weight: bold;
   font-size: var(--fs-600);
   margin-bottom: -1%;
+  line-height: 2rem;
 }
 
 .cardText{
@@ -111,6 +111,23 @@
 
 .imgCard{
   width: 100%;
+}
+
+.imgTop{
+  object-position: top;
+}
+.imgBottom{
+  object-position: bottom;
+}
+.imgRight{
+  object-position: right;
+}
+.imgLeft{
+  object-position: left;
+}
+
+.imgCenter{
+  object-position: center;
 }
 
 
@@ -133,7 +150,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .siteName{
@@ -232,7 +248,14 @@ font-size: 1rem;
   text-decoration: none;
 }
 
+.colorRed{
+  color:red;
+  transition: color 0.5s ease-in-out;
+}
 
+.colorRed:hover{
+  color:white;
+}
 
 
 .containerTexts{
@@ -290,6 +313,10 @@ margin-inline: 0.4rem;
   font-size: 1.1rem;
   font-family:'Gill Sans';
 
+}
+
+.footerArticle{
+text-align: center;
 }
 
 

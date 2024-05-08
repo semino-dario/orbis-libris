@@ -8,9 +8,10 @@ interface CardProps {
     description: string
     cardType:string
     link:string
+    imgPosition?:string 
 }
 
-const Card: React.FC<CardProps> = ({ mainImage, title, description, cardType, link }) => {
+const Card: React.FC<CardProps> = ({ mainImage, title, description, cardType, link, imgPosition }) => {
   
   const imageSource = typeof mainImage === 'string' ? mainImage : mainImage.src;
   
@@ -18,7 +19,7 @@ const Card: React.FC<CardProps> = ({ mainImage, title, description, cardType, li
 
         <Link href={`articulos/${link}`} className={`${cardType} ${styles.cardStyle} ${styles.offDecoration}` }>
         <img
-          className={styles.imgCard}
+          className={`${styles.imgCard}  ${ !imgPosition ? styles.imgCenter : imgPosition }`}
           src={imageSource}
           alt=""
         />

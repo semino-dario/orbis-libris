@@ -1,5 +1,7 @@
+import Footer from "@/app/components/Footer";
 import Article from "../../components/Article";
 import content from '../../content.json'
+import guarda from "../../components/images/hoja-de-guarda.png"
 type ContentKey = keyof typeof content;
 
 

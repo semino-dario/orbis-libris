@@ -18,7 +18,7 @@ const CardVertical: React.FC<CardVerticalProps> = ({ mainImage, title, descripti
   return (
         <Link href={`articulos/${link}`} className={`${styles.artv} ${styles.cardStyle} ${styles.offDecoration}` }>
         <img
-          className={styles.imgCard}
+          className={`${styles.imgCard} ${styles.imgTop}`}
           src={imageSource}
           alt=""
         />

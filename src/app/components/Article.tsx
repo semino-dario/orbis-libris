@@ -1,6 +1,8 @@
 import { StaticImageData } from 'next/image'
 import Header from '../components/Header'
 import styles from '../page.module.css'
+import Footer from './Footer'
+import guarda from "./images/hoja-de-guarda.png"
 
 interface ArticleProps {
     title: string,
@@ -21,12 +23,14 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
             <img src={imageSource} alt="imagen principal" />
             <header className={styles.hedaerArticle}>
                 <h1>{title}</h1>
-                <p>{description}</p>
+                <p dangerouslySetInnerHTML={{ __html: description}}/>
                 <span>- {date} -</span>
             </header>
             <article>
           <div className={styles.textArticle} dangerouslySetInnerHTML={{ __html: mainContent }} />
             </article>
+            <img src={guarda.src} className={styles.closeImage} alt="" />
+            <p className={styles.footerArticle}>Salvo que se indique lo contrario todos los textos de Orbis Libris fueron escritos por <a href="https://www.linkedin.com/in/dario-semino/" target="_blank" className={`${styles.offDecoration} ${styles.colorRed}`}> Darío Semino</a>. Para contactarse se puede escribir a orbislibriscontacto@gmail.com</p>
         </main>
         </div>
     )
