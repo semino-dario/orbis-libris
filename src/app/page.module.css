@@ -45,7 +45,7 @@
     grid-gap: 15px;
     width: 95vw;
     margin: 0 auto;
-    grid-auto-rows: minmax(350px, 400px);
+    /* grid-auto-rows: minmax(350px, 400px); */
 }
 
 
