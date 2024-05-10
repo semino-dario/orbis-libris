@@ -50,7 +50,7 @@ export default function Home() {
       <Card
       cardType={styles.art25} 
       title="Mundos que salen de la niebla"
-      description="La América precolombina en <i><strong>1491 - Una nueva historia de las Américas antes de Colón</i></strong> de Charles C. Mann. Y un poco más..."
+      description="La América precolombina en <i><strong>1491 - Una nueva historia de las Américas antes de Colón</i></strong> de Charles C. Mann."
       mainImage={oski}
       link="mundos-que-salen-de-la-niebla"
 
@@ -65,7 +65,7 @@ export default function Home() {
       <Card
       cardType={styles.art2}
       title="Las aventuras de una idea"
-      description="Un viaje a través de la concepción occidental del universo, desde Platón hasta el siglo XIX, en <i><strong>La Gran Cadena del Ser</i></strong> de Arthur O. Lovejoy"
+      description="Un viaje a través de la concepción del universo, desde Platón hasta el siglo XIX, en <i><strong>La Gran Cadena del Ser</i></strong> de Arthur O. Lovejoy"
       mainImage={idea}
       link="las-aventuras-de-una-idea"
 
