@@ -12,12 +12,11 @@ import oski from "./components/images/oski.jpeg"
 import guarda from "./components/images/hoja-de-guarda.png"
 import Footer from "./components/Footer";
 import Link from "next/link";
-// I add a change here to see what happens now
+
 export default function Home() {
 
   return (
     <div className={styles.mainContainer}>
-      <div></div>
       <header className={styles.header}>
       <div className={styles.siteTitle}>
       <h1 className={styles.siteName}>ORBIS LIBRIS</h1>
