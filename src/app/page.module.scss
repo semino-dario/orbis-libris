@@ -1,3 +1,6 @@
+@use './styles/vars';
+
+
 .container{
   /* font-sizes */
 --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
@@ -9,7 +12,6 @@
 --fs-300: 1rem;
 --fs-200: 0.875rem;}
 
-/* I add a comment here */
 
 @media (min-width: 45rem) {
   .container {
@@ -283,6 +285,7 @@ margin-inline: 0.4rem;
   justify-content: center;
   align-items: center;
   max-width: 50rem ;
+  font-family: var(--font-article);
 }
 
 .containerArticle img{
@@ -307,12 +310,15 @@ margin-inline: 0.4rem;
 .hedaerArticle p {
   width: 80%;
   padding-bottom: 2rem;
+  font-family: vars.$font-article;
+  font-size: 1.1rem;
  
 }
 
 .textArticle{
+  font-family: vars.$font-article;
   font-size: 1.1rem;
-  font-family:'Gill Sans';
+
 }
 
 .textArticle > a{
@@ -414,8 +420,13 @@ text-align: center;}
   font-size: 2.7rem ;
 }
 
+.hedaerArticle p {
+  font-size: 1.4rem;
+
+}
+
 .textArticle{
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .cita{

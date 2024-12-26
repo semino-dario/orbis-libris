@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image'
 import Header from '../components/Header'
-import styles from '../page.module.css'
+import styles from '../page.module.scss'
 import Footer from './Footer'
 import guarda from "./images/hoja-de-guarda.png"
 import Link from 'next/link'

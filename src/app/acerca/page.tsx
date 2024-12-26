@@ -1,4 +1,4 @@
-import styles from '../../app/page.module.css'
+import styles from '../../app/page.module.scss'
 import LinkButton from '../components/LinkButton'
 import Header from '../components/Header'
 import Link from 'next/link'
