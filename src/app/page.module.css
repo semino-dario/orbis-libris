@@ -1,0 +1,452 @@
+.container{
+  /* font-sizes */
+--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+--fs-800: 3.5rem;
+--fs-700: 1.5rem;
+--fs-600: 1.5rem;
+--fs-500: 1rem;
+--fs-400: 0.9375rem;
+--fs-300: 1rem;
+--fs-200: 0.875rem;}
+
+@media (min-width: 45rem) {
+  .container {
+         /* font-sizes */
+  --fs-800: 5rem;
+  --fs-700: 2.3rem;
+  --fs-600: 1.6rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+
+
+  }
+}
+
+@media (min-width: 70rem) {
+  .container {
+      --fs-800: 6.25rem;
+      --fs-600: 1.6rem;
+      --fs-400: 1.125rem;
+      --fs-500: 1.75rem;
+
+  }
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 15px;
+    width: 95vw;
+    margin: 0 auto;
+    grid-auto-rows: minmax(350px, 400px);
+}
+
+
+.cardStyle{
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 2px solid gray;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+}
+
+.cardStyle:hover{
+  color: red;
+}
+
+/* .contentVertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 0.5rem;
+  padding: 1rem;
+} */
+
+
+
+.cardContent, .contentVertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+
+.titleVertical{
+  font-size: var(--fs-600);
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 2rem;
+
+}
+
+.cardTitle{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: var(--fs-600);
+  margin-bottom: -1%;
+  line-height: 2rem;
+}
+
+.cardText{
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  line-height: 1.3rem;
+}
+
+.imgCard{
+  width: 100%;
+}
+
+.imgTop{
+  object-position: top;
+}
+.imgBottom{
+  object-position: bottom;
+}
+.imgRight{
+  object-position: right;
+}
+.imgLeft{
+  object-position: left;
+}
+
+.imgCenter{
+  object-position: center;
+}
+
+
+
+.header{
+ grid-column: 1 / -1;
+ height: 250px;
+ width: 95vw;
+ border-bottom: solid 3px white;
+ margin-bottom: 1rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ gap: 1.5rem;
+}
+
+.siteTitle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.siteName{
+font-size: 2.7rem;
+/* background-image: url("https://orbislibris.com/wp-content/uploads/2021/04/cropped-hoja-de-guarda-piscodelica.png");
+background-size: cover;
+background-clip: text;
+--webkit-background-clip: text;
+color: transparent; */
+margin-bottom: -20px;
+}
+
+.siteSubTitle{
+font-size: 1rem;
+}
+
+.about{
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.about:hover{
+  color:red;
+}
+
+.footer{
+  grid-column: 1 / -1;
+
+}
+
+.closeImage{
+  width: 100%;
+  height: 7rem;
+  border-radius: 10px;
+}
+
+.footerText{
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+
+.art1{
+  grid-column: span 12;
+}
+
+.art2{
+  grid-column: span 12;
+  grid-row: span 1;
+}
+
+.art3{
+  grid-column: span 12;
+}
+
+.artv{
+  grid-row: span 1;
+  grid-column: span 12;
+}
+
+.art25{
+  grid-column: span 12;
+  
+}
+
+.cita{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  grid-column: span 12;
+  text-align: center;
+  border: 1px white solid;
+  border-radius: 10px;
+  letter-spacing: 1.2px ;
+  font-size: 1rem;
+}
+
+.link{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover{
+  color:red;
+}
+
+.offDecoration{
+  text-decoration: none;
+}
+
+.colorRed{
+  color:red;
+  transition: color 0.5s ease-in-out;
+}
+
+.colorRed:hover{
+  color:white;
+}
+
+
+.containerTexts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.aboutText{
+border: 1px white solid;
+border-radius: 10px;
+padding: 1rem;
+max-width: 40rem;
+margin-inline: 0.4rem;
+}
+
+/* ARTICULO */
+
+.containerArticle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50rem ;
+}
+
+.containerArticle img{
+  border-radius: 10px;
+}
+
+.hedaerArticle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid white;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+.hedaerArticle h1 {
+  font-size: 2rem ;
+}
+
+.hedaerArticle p {
+  width: 80%;
+  padding-bottom: 2rem;
+ 
+}
+
+.textArticle{
+  font-size: 1.1rem;
+  font-family:'Gill Sans';
+}
+
+.textArticle > a{
+  text-decoration: none;
+  color:red;
+}
+
+.textArticle > a:hover{
+  color:white;
+}
+
+.imgArticle{
+  width: 90%;
+}
+
+.footerArticle{
+text-align: center;
+}
+
+
+
+@media(min-width: 56rem){
+
+  .container{
+      grid-auto-rows: 18rem;
+  }
+
+
+.cardContent, .contentVertical{
+  padding-top: 0;
+    gap:0;
+}
+
+.siteName{
+  font-size: 3.5rem;
+}
+
+.siteSubTitle{
+  font-size: 1.3rem;
+}
+
+.header{
+flex-direction: row;
+justify-content: space-between;
+}
+
+.cardText{
+  font-weight: lighter;
+}
+
+.art1{
+  grid-column: span 6;
+}
+
+.art2{
+  grid-column: span 6;
+
+}
+
+.art25{
+  grid-column: span 6;
+
+
+}
+
+.art3{
+  grid-column: span 12;
+  align-items: center;
+      text-align: center;
+
+} 
+
+.artv{
+  grid-column: span 6;
+  grid-row: span 1;
+
+}
+  
+}
+
+@media (min-width: 70rem){
+  .container{
+      min-width: 70rem;
+      max-width: 80vw;
+      grid-auto-rows: 16rem;
+
+  }
+
+  .header{
+    min-width: 70rem;
+    max-width: 80vw;
+  }
+  
+.contentVertical{
+  justify-content: center;
+text-align: center;}
+
+.hedaerArticle h1 {
+  font-size: 2.7rem ;
+}
+
+.textArticle{
+  font-size: 1.3rem;
+}
+
+.cita{
+  font-weight: lighter; 
+
+}
+
+  .art1{
+      grid-row:span 2;
+      grid-column: span 3;
+  }
+  
+  .art2{
+      grid-column: span 6;
+      grid-row: span 1;
+  }
+  
+  .art3{
+      grid-column: span 12;
+      
+  }
+  
+  .artv{
+      grid-row: span 3;
+      grid-column: span 6;
+  }
+  
+  .art25{
+      grid-column: span 8;
+      
+  }
+
+  .cita{
+      grid-column: span 4;
+  }
+}
