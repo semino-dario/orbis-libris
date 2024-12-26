@@ -12,7 +12,7 @@ import oski from "./components/images/oski.jpeg"
 import guarda from "./components/images/hoja-de-guarda.png"
 import Footer from "./components/Footer";
 import Link from "next/link";
-// I add a change here
+// I add a change here to see what happens
 export default function Home() {
 
   return (
