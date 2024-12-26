@@ -17,6 +17,7 @@ export default function Home() {
 
   return (
     <div className={styles.mainContainer}>
+      <div></div>
       <header className={styles.header}>
       <div className={styles.siteTitle}>
       <h1 className={styles.siteName}>ORBIS LIBRIS</h1>
