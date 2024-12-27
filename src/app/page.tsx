@@ -10,6 +10,7 @@ import reina from "./components/images/reina.png"
 import vautrin from "./components/images/vautrin.png"
 import oski from "./components/images/oski.jpeg"
 import guarda from "./components/images/hoja-de-guarda.png"
+import aboutLogo from "./components/images/about-logo.png" 
 import Footer from "./components/Footer";
 import Link from "next/link";
 
@@ -22,9 +23,9 @@ export default function Home() {
       <h1 className={styles.siteName}>ORBIS LIBRIS</h1>
       <p className={styles.siteSubTitle}>Libros de cualquier tiempo y lugar</p>
       </div>
-      <Link href="./acerca" className={styles.about}>¿qué y quién?</Link>
+      <Link href="./acerca" className={styles.about}><img style={{width:"12rem"}} src={aboutLogo.src} alt="" /></Link>
       </header>
-   <main className={styles.container}>
+   <main className={styles.container} style={{paddingTop:"2rem"}}>
       <Card
    
       cardType={styles.art2} 
