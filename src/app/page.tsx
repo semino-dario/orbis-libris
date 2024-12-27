@@ -23,7 +23,7 @@ export default function Home() {
       <h1 className={styles.siteName}>ORBIS LIBRIS</h1>
       <p className={styles.siteSubTitle}>Libros de cualquier tiempo y lugar</p>
       </div>
-      <Link href="./acerca" className={styles.about}><img style={{width:"12rem"}} src={aboutLogo.src} alt="" /></Link>
+      <Link href="./acerca" ><img style={{width:"12rem"}} src={aboutLogo.src} alt="" /></Link>
       </header>
    <main className={styles.container} style={{paddingTop:"2rem"}}>
       <Card

@@ -1,5 +1,5 @@
 @use './styles/vars';
-
+@use './styles/header.scss';
 
 .container{
   /* font-sizes */
@@ -136,50 +136,6 @@
 
 
 
-.header{
- grid-column: 1 / -1;
- height: 250px;
- width: 95vw;
- border-bottom: solid 3px white;
- margin-bottom: 1rem;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- gap: 1.5rem;
-}
-
-.siteTitle{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.siteName{
-font-size: 2.7rem;
-/* background-image: url("https://orbislibris.com/wp-content/uploads/2021/04/cropped-hoja-de-guarda-piscodelica.png");
-background-size: cover;
-background-clip: text;
---webkit-background-clip: text;
-color: transparent; */
-margin-bottom: -20px;
-}
-
-.siteSubTitle{
-font-size: 1rem;
-}
-
-.about{
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease-in-out;
-}
-
-.about:hover{
-  color:red;
-}
 
 .footer{
   grid-column: 1 / -1;
@@ -352,19 +308,6 @@ text-align: center;
     gap:0;
 }
 
-.siteName{
-  font-size: 3.5rem;
-}
-
-.siteSubTitle{
-  font-size: 1.3rem;
-}
-
-.header{
-flex-direction: row;
-justify-content: space-between;
-}
-
 .cardText{
   font-weight: lighter;
 }
@@ -407,11 +350,7 @@ justify-content: space-between;
 
   }
 
-  .header{
-    min-width: 70rem;
-    max-width: 80vw;
-  }
-  
+
 .contentVertical{
   justify-content: center;
 text-align: center;}
