@@ -1,0 +1,36 @@
+@use './vars';
+
+.footer{
+    grid-column: 1 / -1;
+  
+  }
+  
+  .closeImage{
+    width: 100%;
+    height: 7rem;
+    border-radius: 10px;
+  }
+  
+  .footerText{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    font-family: vars.$font-article;
+    color:rgba($color: #fff, $alpha: 0.7)
+  }
+
+  .ornament{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media(min-width: 56rem){
+    .ornament{
+        width: 80%;
+    }
+
+    .footerText{
+      font-size: 1.5rem;
+    }
+  }

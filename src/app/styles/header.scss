@@ -22,7 +22,7 @@
    
    .siteName{
    margin-bottom: -20px;
-   font-size: 3.5rem;
+   font-size: 3rem;
 
    }
    
@@ -34,9 +34,18 @@
     width: 7rem;
    }
   
+
+    @media(min-width: 23rem){
+     .siteName{
+        font-size: 3.5rem;
+     }
+    }
+
    @media(min-width: 56rem){
      
-      
+    // .siteName{
+    //     font-size: 4rem;
+    //  }
       .siteSubTitle{
         font-size: 1.3rem;
       }

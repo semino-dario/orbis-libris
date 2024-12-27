@@ -1,5 +1,6 @@
 @use './styles/vars';
 @use './styles/header.scss';
+@use './styles/footer.scss';
 
 .container{
   /* font-sizes */
@@ -137,21 +138,6 @@
 
 
 
-.footer{
-  grid-column: 1 / -1;
-
-}
-
-.closeImage{
-  width: 100%;
-  height: 7rem;
-  border-radius: 10px;
-}
-
-.footerText{
-  text-align: center;
-  font-size: 1rem;
-}
 
 
 
