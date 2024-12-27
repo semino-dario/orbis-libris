@@ -10,7 +10,7 @@ import reina from "./components/images/reina.png"
 import vautrin from "./components/images/vautrin.png"
 import oski from "./components/images/oski.jpeg"
 import guarda from "./components/images/hoja-de-guarda.png"
-import aboutLogo from "./components/images/about-logo.png" 
+import aboutLogo from "./components/images/logo-about.svg" 
 import Footer from "./components/Footer";
 import Link from "next/link";
 
