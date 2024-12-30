@@ -3,6 +3,7 @@ import LinkButton from '../components/LinkButton'
 import Header from '../components/Header'
 import Link from 'next/link'
 import guarda from "../components/images/hoja-de-guarda.png"
+import ornament from "../components/images/line-ornament.svg"
 
 export default function Acerca () {
     return(
