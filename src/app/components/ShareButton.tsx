@@ -1,0 +1,57 @@
+"use client"
+
+import styles from '../page.module.scss';
+import React, { useState } from 'react';
+import { FaFacebook, FaLinkedin, FaWhatsapp, FaTelegram, FaTimes } from 'react-icons/fa';
+import shareIcon from './images/share-icon.svg';
+
+interface ShareButtonProps {
+  url: string;
+  text: string;
+}
+
+const ShareButton: React.FC<ShareButtonProps> = ({ url, text }) => {
+  
+    const [show, setShow] = useState(false);
+  
+    const shareOnFacebook = () => {
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+    window.open(facebookShareUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  const shareOnLinkedIn = () => {
+    const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`;
+    window.open(linkedInShareUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  const shareOnWhatsApp = () => {
+    const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}%20${encodeURIComponent(url)}`;
+    window.open(whatsappShareUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  const shareOnTelegram = () => {
+    const telegramShareUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+    window.open(telegramShareUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <div className={styles.shareContainer}>  
+    {  !show ?
+    <img className={styles.shareIcon} onClick={()=> setShow(!show)} src={ shareIcon.src }/>
+      : 
+      <FaTimes onClick={()=> setShow(!show)} size={35} /> 
+  }
+    {show &&
+        <div className={styles.shareButtonContainer}>
+            <FaFacebook className={styles.shareButton} onClick={shareOnFacebook} size={35} />
+            <FaLinkedin className={styles.shareButton} onClick={shareOnLinkedIn}  size={35} />
+            <FaWhatsapp className={styles.shareButton} onClick={shareOnWhatsApp} size={35} />
+            <FaTelegram className={styles.shareButton} onClick={shareOnTelegram}  size={35} />
+        </div>
+        
+}
+    </div>
+  );
+};
+
+export default ShareButton;

@@ -1,0 +1,35 @@
+@use './vars';
+
+.shareContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.shareButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    }
+
+    .shareButton{
+       
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        }
+
+        .shareButton:hover{
+            color: red;
+            }
+.shareIcon{
+    width: 5rem;
+    height: auto;
+    cursor: pointer;}
