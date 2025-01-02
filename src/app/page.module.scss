@@ -221,6 +221,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   max-width: 50rem ;
   font-family: var(--font-article);
 }
@@ -238,6 +239,7 @@
   border-bottom: 2px solid white;
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .hedaerArticle h1 {
@@ -252,15 +254,26 @@
  
 }
 
-.articleButtonsContainer{
+.dateAndButtonsContainer{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
 }
 
+.dateAndButtonsContainer > h5{
+  width: 8rem;
+}
+
+.articleButtonsContainer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 .textArticle{
   font-family: vars.$font-article;
-  font-size: 1.3rem;
+  width: 100%;
+  padding-inline: 0.3rem;
 
 }
 

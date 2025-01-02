@@ -12,18 +12,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    margin-top: 8.5rem;
   
     }
 
-    .shareButton{
-       
+    .shareButton{   
         color: white;
         padding: 0.5rem;
         border-radius: 0.5rem;
         font-size: 1.2rem;
         font-weight: bold;
         cursor: pointer;
-        transition: background-color 0.3s;
         }
 
    .shareButton:hover{
@@ -42,3 +42,7 @@
     }
 }
 
+.cancelShare{
+    width: 5rem;
+    height: auto;
+}

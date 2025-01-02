@@ -45,6 +45,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ url, text }) => {
   } 
     {show &&
         <div className={styles.shareButtonContainer}>
+            <h4>Compartir: </h4>
             <FaFacebook className={styles.shareButton} onClick={shareOnFacebook} size={35} />
             <FaLinkedin className={styles.shareButton} onClick={shareOnLinkedIn}  size={35} />
             <FaWhatsapp className={styles.shareButton} onClick={shareOnWhatsApp} size={35} />
