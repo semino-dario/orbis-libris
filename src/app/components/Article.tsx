@@ -12,9 +12,10 @@ interface ArticleProps {
     mainContent: string,
     date: string,
     image: string | StaticImageData
+    url:string
 }
 
-const Article: React.FC<ArticleProps> = ({title, description, mainContent, image, date}) => {
+const Article: React.FC<ArticleProps> = ({title, description, mainContent, image, date, url}) => {
     
     const imageSource = typeof image === 'string' ? image : image.src;
 
@@ -29,7 +30,7 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
                 <span>- {date} -</span>
             <div className={styles.articleButtonsContainer}>
                 <ShareButton
-                url='https://orbislibris.com/'
+                url={url}
                 text='Compartir'
                 />
             </div>

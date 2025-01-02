@@ -22,7 +22,8 @@ const image = data.image
             date={date}
             title={title}
             description={description}
-            mainContent={mainContent}     
+            mainContent={mainContent}
+            url={`https://orbislibris.com/articulos/${params.id}`}     
             />
         </div>
     )

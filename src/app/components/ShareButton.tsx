@@ -3,7 +3,6 @@
 import styles from '../page.module.scss';
 import React, { useState } from 'react';
 import { FaFacebook, FaLinkedin, FaWhatsapp, FaTelegram, FaTimes } from 'react-icons/fa';
-import shareIcon from './images/share-icon.svg';
 import ShareIcon from './ShareIcon';
 import CancelIcon from './CancelIcon';
 
