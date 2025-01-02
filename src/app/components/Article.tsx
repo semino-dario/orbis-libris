@@ -27,10 +27,12 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
                 <h1>{title}</h1>
                 <p dangerouslySetInnerHTML={{ __html: description}}/>
                 <span>- {date} -</span>
+            <div className={styles.articleButtonsContainer}>
                 <ShareButton
                 url='https://orbislibris.com/'
                 text='Compartir'
                 />
+            </div>
             </header>
           <div className={styles.textArticle} dangerouslySetInnerHTML={{ __html: mainContent }} />
           <Link href="/" className={styles.closeImage} >  <img src={guarda.src} className={styles.closeImage} alt="" /></Link>

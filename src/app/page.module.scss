@@ -236,7 +236,7 @@
   align-items: center;
   text-align: center;
   border-bottom: 2px solid white;
-  padding-bottom: 3rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 2rem;
 }
 
@@ -250,6 +250,12 @@
   font-family: vars.$font-article;
   font-size: 1.3rem;
  
+}
+
+.articleButtonsContainer{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .textArticle{

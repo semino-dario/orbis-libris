@@ -4,6 +4,8 @@ import styles from '../page.module.scss';
 import React, { useState } from 'react';
 import { FaFacebook, FaLinkedin, FaWhatsapp, FaTelegram, FaTimes } from 'react-icons/fa';
 import shareIcon from './images/share-icon.svg';
+import ShareIcon from './ShareIcon';
+import CancelIcon from './CancelIcon';
 
 interface ShareButtonProps {
   url: string;
@@ -37,10 +39,11 @@ const ShareButton: React.FC<ShareButtonProps> = ({ url, text }) => {
   return (
     <div className={styles.shareContainer}>  
     {  !show ?
-    <img className={styles.shareIcon} onClick={()=> setShow(!show)} src={ shareIcon.src }/>
-      : 
-      <FaTimes onClick={()=> setShow(!show)} size={35} /> 
-  }
+    
+    <ShareIcon onClick={()=> setShow(!show)}  />
+    : 
+      <CancelIcon onClick={()=> setShow(!show)}  />
+  } 
     {show &&
         <div className={styles.shareButtonContainer}>
             <FaFacebook className={styles.shareButton} onClick={shareOnFacebook} size={35} />
