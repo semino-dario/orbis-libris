@@ -1,7 +1,7 @@
 import styles from '../../app/page.module.scss'
 import LinkButton from '../components/LinkButton'
 import Header from '../components/Header'
-
+import books from '../components/images/books.svg'
 
 export default function Acerca () {
     return(
@@ -20,11 +20,14 @@ export default function Acerca () {
                 <h1>¿Quién?</h1>
             <p>Mi nombre es Darío Semino, nací en 1981 en Buenos Aires. Soy lector y escritor. Realicé sin terminar estudios de Letras y Cine, además de diversos cursos sobre filosofía y otros oficios útiles para el quehacer literario. Publiqué algunos títulos de manera independiente y realicé trabajos de edición, periodismo y teatro, participé de la organización de diversas actividades culturales y, sobre todo, ejercí el cruel y querido oficio de librero. Durante casi diez años trabajé en la librería La Libre de Buenos Aires, extraño cruce de caminos donde quienes atienden muchas veces se encargan de reseñar los libros que venden, de ese hábito viene la idea de Orbis Libris.
                 Salvo que se aclare lo contrario, todos los textos que se publican aquí son culpa mía. Si encontrás algún error en alguno de los artículos o querés realizar algún comentario, o por cualquier otra cosa que quieras contactarme, podés escribir a orbislibriscontacto@gmail.com.</p>
+              <div className={styles.containerAboutButton}>
+                <LinkButton
+                    text="- volver -"
+                    href="/"
+            /></div>
+                <img className={styles.booksImage} src={books.src} alt="Libros apilados." />
             </article>
-            <LinkButton
-            text="- volver -"
-            href="/"
-            />
+            
         </main>
     )
 }

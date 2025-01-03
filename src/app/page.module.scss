@@ -244,6 +244,7 @@
 
 .hedaerArticle h1 {
   font-size: 2rem ;
+  font-family: sans-serif;
 }
 
 .hedaerArticle p {
@@ -276,6 +277,18 @@
   padding-inline: 0.3rem;
 
 }
+
+.textArticle p{
+  line-height: 1.4;
+}
+
+.textArticle p:first-of-type::first-letter{
+  font-size: 5rem; 
+  font-family: 'Georgia', serif; 
+  font-weight: bold;
+  float: left;
+  margin-right: 0.1em;
+  line-height: 1.1;}
 
 .textArticle > a{
   text-decoration: none;

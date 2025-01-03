@@ -11,6 +11,8 @@
     font-weight: lighter;
     }
 
+   
+
     .aboutText > h1{
     text-align: center;
     font-size: 3rem;
@@ -19,4 +21,15 @@
     .ornament{
     width: 90%;
     height: auto;
+    }
+
+    .booksImage{
+        width:80vw;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .containerAboutButton{
+        display: flex;
+        justify-content: center;
     }
