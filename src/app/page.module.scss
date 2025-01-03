@@ -342,10 +342,10 @@ text-align: center;
   
 }
 
-@media (min-width: 70rem){
+@media (min-width: 65rem){
   .container{
-      min-width: 70rem;
-      max-width: 80vw;
+      min-width: 65rem;
+      max-width: 75vw;
       grid-auto-rows: 16rem;
 
   }

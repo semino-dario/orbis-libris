@@ -22,22 +22,23 @@
    
    .siteName{
    margin-bottom: -20px;
-   font-size: 3rem;
+   font-size: 2.8rem;
    text-decoration: none;
-
-   }
+   font-family: Arial, Helvetica, sans-serif;
+  }
    
    .siteSubTitle{
    font-size: 1rem;
    }
    
    .aboutLogo{
+    margin-top: 0.5rem;
     width: 7rem;
    }
   
   
 
-    @media(min-width: 23rem){
+    @media(min-width: 30rem){
      .siteName{
         font-size: 3.5rem;
      }
