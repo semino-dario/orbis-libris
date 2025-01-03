@@ -9,7 +9,7 @@
 --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
 --fs-800: 3.5rem;
 --fs-700: 1.5rem;
---fs-600: 1.5rem;
+--fs-600: 1.4rem;
 --fs-500: 1rem;
 --fs-400: 0.9375rem;
 --fs-300: 1rem;
@@ -21,7 +21,7 @@
          /* font-sizes */
   --fs-800: 5rem;
   --fs-700: 2.3rem;
-  --fs-600: 1.6rem;
+  --fs-600: 1.5rem;
   --fs-400: 1rem;
   --fs-500: 1.25rem;
 
@@ -32,7 +32,7 @@
 @media (min-width: 70rem) {
   .container {
       --fs-800: 6.25rem;
-      --fs-600: 1.6rem;
+      --fs-600: 1.5rem;
       --fs-400: 1.125rem;
       --fs-500: 1.75rem;
 
@@ -345,7 +345,7 @@ text-align: center;
 @media (min-width: 60rem){
   .container{
       min-width: 60rem;
-      max-width: 75vw;
+      max-width: 80vw;
       grid-auto-rows: 16rem;
 
   }
