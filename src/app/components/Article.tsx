@@ -9,6 +9,7 @@ import ShareButton from './ShareButton'
 import { useState } from 'react'
 import FontSizeIcon from './icons/FontSizeIcon'
 import FontSizeIconCancel from './icons/FontSizeIconCancel'
+import ProgressBar from './ProgressBar'
 
 interface ArticleProps {
     title: string,
@@ -50,6 +51,7 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
             </div>
             </div>
             </header>
+            <ProgressBar/>
           <div className={styles.textArticle}
            style={{fontSize: !fontSizeBig ? "1.4rem" : "1.8rem"}}
            dangerouslySetInnerHTML={{ __html: mainContent }} />
