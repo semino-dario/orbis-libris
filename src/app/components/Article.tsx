@@ -6,7 +6,7 @@ import Footer from './Footer'
 import guarda from "./images/hoja-de-guarda.png"
 import Link from 'next/link'
 import ShareButton from './ShareButton'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import FontSizeIcon from './icons/FontSizeIcon'
 import FontSizeIconCancel from './icons/FontSizeIconCancel'
 import ProgressBar from './ProgressBar'
@@ -25,6 +25,32 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
     const imageSource = typeof image === 'string' ? image : image.src;
     const [fontSizeBig, setFontSizeBig] = useState(false)
 
+  const [isSticky, setIsSticky] = useState(false);
+  const divRef = useRef<HTMLDivElement>(null);
+  const originalPositionRef = useRef<number | null>(null);
+ 
+  const handleScroll = () => {
+    if (divRef.current) {
+      const offsetTop = divRef.current.getBoundingClientRect().top;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (originalPositionRef.current === null) {
+        originalPositionRef.current = divRef.current.offsetTop;
+      }
+
+      if (scrollTop >= originalPositionRef.current) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
     return(
         <div className={styles.containerTexts}>
             <Header/>
@@ -33,9 +59,11 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
             <header  className={styles.hedaerArticle}>
                 <h1>{title}</h1>
                 <p dangerouslySetInnerHTML={{ __html: description}}/>
-                <div className={styles.dateAndButtonsContainer}>
+            
+            <div ref={divRef} style={{width:"100%"}} className={`${isSticky ? styles.fixed : ''}`}>
+                <div  className={`${styles.dateAndButtonsContainer}`}>
                 <h5 >{date}</h5>
-            <div className={styles.articleButtonsContainer}>
+            <div  className={`${styles.articleButtonsContainer}`}>
                 { !fontSizeBig ?
                 <FontSizeIcon 
                 onClick={()=>setFontSizeBig(!fontSizeBig)}
@@ -50,9 +78,10 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
                 />
             </div>
             </div>
-            </header>
             <ProgressBar/>
-          <div className={styles.textArticle}
+            </div>
+            </header>
+          <div className={`${styles.textArticle} ${isSticky ? styles.paddingTopTextArticle : ''}`}
            style={{fontSize: !fontSizeBig ? "1.4rem" : "1.8rem"}}
            dangerouslySetInnerHTML={{ __html: mainContent }} />
           <Link href="/" className={styles.closeImage} >  <img src={guarda.src} className={styles.closeImage} alt="" /></Link>

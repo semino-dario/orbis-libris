@@ -236,10 +236,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 2px solid white;
   padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
-  width: 100%;
+  width: 100vw;
 }
 
 .hedaerArticle h1 {
@@ -259,10 +257,22 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 4.5rem;
+
 }
 
 .dateAndButtonsContainer > h5{
   width: 8rem;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  max-width: 50rem;
+  z-index: 1000;
+  padding-inline: 1rem;
+  margin: 0 auto;
+  background-color: rgb(17 24 39);
 }
 
 .articleButtonsContainer{
@@ -275,7 +285,11 @@
   font-family: vars.$font-article;
   width: 100%;
   padding-inline: 0.3rem;
+  padding-top: 3rem;
+}
 
+.paddingTopTextArticle{
+  padding-top: 7rem;
 }
 
 .textArticle p{
@@ -308,9 +322,6 @@ text-align: center;
 }
 
 .progressBarContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 5px;
   background-color: #f3f3f3;
@@ -324,12 +335,18 @@ text-align: center;
   transition: width 0.1s ease-in-out;
 }
 
+
+
+
 @media(min-width: 56rem){
 
   .container{
       grid-auto-rows: 18rem;
   }
 
+.hedaerArticle{
+  width: 100%;
+}
 
 .cardContent, .contentVertical{
   padding-top: 0;
