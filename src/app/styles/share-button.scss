@@ -23,7 +23,7 @@
     }
 
     .shareButton{   
-        color: white;
+        color: #fff;
         padding: 0.5rem;
         border-radius: 0.5rem;
         font-size: 1.2rem;
@@ -39,6 +39,10 @@
     width: 5rem;
     height: auto;
     cursor: pointer;
+}
+
+.svgPath{
+    fill:#333;
 }
 
 .shareIcon:hover{

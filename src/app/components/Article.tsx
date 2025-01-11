@@ -2,7 +2,6 @@
 import { StaticImageData } from 'next/image'
 import Header from '../components/Header'
 import styles from '../page.module.scss'
-import Footer from './Footer'
 import guarda from "./images/hoja-de-guarda.png"
 import Link from 'next/link'
 import ShareButton from './ShareButton'
@@ -24,7 +23,9 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
     
     const imageSource = typeof image === 'string' ? image : image.src;
     const [fontSizeBig, setFontSizeBig] = useState(false)
+    const [lightMode, setLightMode] = useState(false);
 
+    
   const [isSticky, setIsSticky] = useState(false);
   const divRef = useRef<HTMLDivElement>(null);
   const originalPositionRef = useRef<number | null>(null);
@@ -51,19 +52,25 @@ const Article: React.FC<ArticleProps> = ({title, description, mainContent, image
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
+  
+
     return(
-        <div className={styles.containerTexts}>
-            <Header/>
+        <div className={`${styles.containerTexts} ${lightMode ? styles.lightMode : styles.darkMode} `}>
+            <Header
+                lightMode={lightMode}
+            />
         <main className={styles.containerArticle}>
             <img src={imageSource} alt="imagen principal" />
             <header  className={styles.hedaerArticle}>
                 <h1>{title}</h1>
                 <p dangerouslySetInnerHTML={{ __html: description}}/>
             
-            <div ref={divRef} style={{width:"100%"}} className={`${isSticky ? styles.fixed : ''}`}>
+            <div ref={divRef} style={{width:"100%"}} className={`${isSticky ? styles.fixed : ''} ${lightMode ? styles.lightMode : styles.darkMode} `}>
                 <div  className={`${styles.dateAndButtonsContainer}`}>
                 <h5 >{date}</h5>
             <div  className={`${styles.articleButtonsContainer}`}>
+                <button onClick={()=> setLightMode(!lightMode)}>mode</button>
                 { !fontSizeBig ?
                 <FontSizeIcon 
                 onClick={()=>setFontSizeBig(!fontSizeBig)}

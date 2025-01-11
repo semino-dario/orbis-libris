@@ -11,7 +11,6 @@ import vautrin from "./components/images/vautrin.png"
 import oski from "./components/images/oski.jpeg"
 import guarda from "./components/images/hoja-de-guarda.png"
 import Footer from "./components/Footer";
-import Link from "next/link";
 import LogoAbout from './components/LogoAbout';
 
 export default function Home() {
@@ -118,13 +117,11 @@ export default function Home() {
       link="su-alma-es-legion"
       imgPosition={styles.imgRight}
      />
-     <Footer
-     mainImage={guarda}
-     />
-      </main>
-      <div>
-      </div>
      
+      </main>
+      <Footer
+        mainImage={guarda} 
+      />
       </div>
   );
 }

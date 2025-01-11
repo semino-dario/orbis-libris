@@ -1,3 +1,4 @@
+import styles from '../../page.module.scss';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
   title: "Orbis Libris",
   description: "Libros de cualquier tiempo y lugar",
 };
+
+
 
 export default function ArticlesLayout({
     params,
@@ -33,6 +36,7 @@ export default function ArticlesLayout({
   const articleUrl = `https://orbislibris.com/articulos/${params.id}`; 
   const articleImage = image; 
 
+
   return (
     <html lang="en">
       <Head>
@@ -49,7 +53,8 @@ export default function ArticlesLayout({
         <meta name="twitter:url" content={articleUrl} />
         <meta name="twitter:image" content={articleImage} />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${styles.bodyArticle}`}>{children}</body>
     </html>
+
   );
 }

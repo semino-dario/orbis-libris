@@ -1,9 +1,10 @@
 @use './vars';
 
 .footer{
-    grid-column: 1 / -1;
-  
-  }
+  width: 80%;
+  margin-top: 3rem;
+  width: 95vw;
+}
   
   .closeImage{
     width: 100%;
@@ -32,5 +33,12 @@
 
     .footerText{
       font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 60rem){
+    .footer{
+        min-width: 60rem;
+        max-width: 80vw;
     }
   }

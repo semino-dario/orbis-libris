@@ -29,6 +29,7 @@
    
    .siteSubTitle{
    font-size: 1rem;
+
    }
    
    .aboutLogo{
@@ -36,7 +37,15 @@
     width: 7rem;
    }
   
+
+   .ornament{
+    width: 90%;
+    height: auto;
+    }
   
+    .ornament path{
+      fill: #333;
+    }
 
     @media(min-width: 30rem){
      .siteName{
