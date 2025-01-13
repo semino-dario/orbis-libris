@@ -20,6 +20,25 @@
     color: vars.$secondary-color; 
   }
 
+  .svgLightMode path{
+    fill:#333;
+}
+
+.svgDarkMode path{
+    fill:#fff;
+}
+
+.svg{
+    height: auto;
+    cursor: pointer;
+}
+
+.svg:hover{
+    path{
+    fill: red;
+    }
+}
+
 .containerArticle{
     display: flex;
     flex-direction: column;
@@ -81,6 +100,7 @@
   .articleButtonsContainer{
     display: flex;
     justify-content: flex-end;
+    gap:0.8rem;
   }
   
   

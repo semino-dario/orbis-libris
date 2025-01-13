@@ -1,12 +1,12 @@
+"use client"
 import Link from "next/link"
 import styles from "../page.module.scss"
 import LineOrnament from "./icons/LineOrnament"
+import { useArticle } from "./ArticleContext"
 
-interface HeaderProps{
-  lightMode?: boolean
-}
+const Header = () => {
 
-const Header:React.FC<HeaderProps> = ({lightMode}) => {
+  const {lightMode} =  useArticle? useArticle() : {lightMode: false};
 
     return (
         <header>
