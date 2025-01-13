@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../page.module.scss';
+import { useArticle } from './ArticleContext';
 
 const ProgressBar: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const {lightMode} =  useArticle ? useArticle() : {lightMode: false};
 
   const handleScroll = () => {
     const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -17,7 +19,8 @@ const ProgressBar: React.FC = () => {
   }, []);
 
   return (
-    <div className={styles.progressBarContainer}>
+    <div className={`${styles.progressBarContainer} ${lightMode ? styles.lightModeProgressBar
+      : ''}`}>
       <div className={styles.progressBar} style={{ width: `${scrollProgress}%` }}></div>
     </div>
   );

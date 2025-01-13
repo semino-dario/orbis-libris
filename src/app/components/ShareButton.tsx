@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { FaFacebook, FaLinkedin, FaWhatsapp, FaTelegram, FaTimes } from 'react-icons/fa';
 import ShareIcon from './ShareIcon';
 import CancelIcon from './CancelIcon';
+import { useArticle } from './ArticleContext';
 
 interface ShareButtonProps {
   url: string;
@@ -14,7 +15,8 @@ interface ShareButtonProps {
 const ShareButton: React.FC<ShareButtonProps> = ({ url, text }) => {
   
     const [show, setShow] = useState(false);
-  
+    const {lightMode} =  useArticle? useArticle() : {lightMode: false};
+
     const shareOnFacebook = () => {
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
     window.open(facebookShareUrl, '_blank', 'noopener,noreferrer');
@@ -45,7 +47,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ url, text }) => {
   } 
     {show &&
         <div className={styles.shareButtonContainer}>
-            <h4>Compartir: </h4>
+            <h4 >Compartir: </h4>
             <FaFacebook className={styles.shareButton} onClick={shareOnFacebook} size={35} />
             <FaLinkedin className={styles.shareButton} onClick={shareOnLinkedIn}  size={35} />
             <FaWhatsapp className={styles.shareButton} onClick={shareOnWhatsApp} size={35} />

@@ -9,6 +9,7 @@ import FontSizeIcon from "./icons/FontSizeIcon";
 import { useArticle } from "./ArticleContext";
 import LightModeIcon from "./icons/LightModeIcon";
 import DarkModeIcon from "./icons/DarkModeIcon";
+import CancelIcon from "./CancelIcon";
 
 const ArticleButtons = () => {
 
@@ -56,7 +57,7 @@ const {date, url, isSticky, setIsSticky, fontSizeBig, setFontSizeBig, setLightMo
                 onClick={()=>setFontSizeBig(!fontSizeBig)}
                 />                
                 :
-                <FontSizeIconCancel 
+                <CancelIcon 
                 onClick={()=>setFontSizeBig(!fontSizeBig)}
                 />}
                 <ShareButton

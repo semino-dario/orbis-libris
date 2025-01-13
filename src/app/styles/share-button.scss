@@ -18,9 +18,11 @@
     border:1px solid white;
     background-color: rgb(17 24 39);
     border-radius: 0.5rem;
-
-  
     }
+
+    .shareButtonContainer h4{
+        color: vars.$primary-color;
+}
 
     .shareButton{   
         color: #fff;
@@ -43,11 +45,7 @@
 
 
 
-.shareIcon:hover{
-    .svgPath{
-        fill: red;
-    }
-}
+
 
 .cancelShare{
     width: 5rem;
