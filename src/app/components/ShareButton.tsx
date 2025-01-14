@@ -15,7 +15,6 @@ interface ShareButtonProps {
 const ShareButton: React.FC<ShareButtonProps> = ({ url, text }) => {
   
     const [show, setShow] = useState(false);
-    const {lightMode} =  useArticle? useArticle() : {lightMode: false};
 
     const shareOnFacebook = () => {
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;

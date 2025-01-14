@@ -6,7 +6,8 @@ import { useArticle } from "./ArticleContext"
 
 const Header = () => {
 
-  const {lightMode} =  useArticle? useArticle() : {lightMode: false};
+  const articleContext = useArticle();
+  const lightMode = articleContext ? articleContext.lightMode : false;
 
     return (
         <header>

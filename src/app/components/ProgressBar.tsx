@@ -4,7 +4,8 @@ import { useArticle } from './ArticleContext';
 
 const ProgressBar: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const {lightMode} =  useArticle ? useArticle() : {lightMode: false};
+  const articleContext = useArticle();
+  const lightMode = articleContext ? articleContext.lightMode : false;
 
   const handleScroll = () => {
     const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
