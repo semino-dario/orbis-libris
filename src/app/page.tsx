@@ -35,7 +35,7 @@ export default function Home() {
         />
         <Card
           cardType={styles.art2}
-          title="¿Cómo estudiaba Rousseau"
+          title="¿Cómo estudiaba Rousseau?"
           description="Fragmento de las <strong><i>Confesiones</i></strong> traducido junto con Élise Frixtalon"
           mainImage="https://res.cloudinary.com/dsw6fpqoz/image/upload/v1773659874/obris-libris/rousseau-warrens_cyduya.png"
           link="como-estudiaba-rousseau"
