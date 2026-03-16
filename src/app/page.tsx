@@ -27,11 +27,18 @@ export default function Home() {
       </header>
       <main className={styles.container} style={{ paddingTop: "2rem" }}>
         <Card
-          cardType={styles.art3}
+          cardType={styles.art2}
           title="Réquiem para Pablo Artexto"
           description="Texto de despedida a un amigo, publicado por primera vez en lalibre.com"
           mainImage="https://res.cloudinary.com/dsw6fpqoz/image/upload/v1773655323/obris-libris/pablo-artexto-1_t17eh4.jpg"
           link="requiem-para-pablo-artexto"
+        />
+        <Card
+          cardType={styles.art2}
+          title="¿Cómo estudiaba Rousseau"
+          description="Fragmento de las <strong><i>Confesiones</i></strong> traducido junto con Élise Frixtalon"
+          mainImage="https://res.cloudinary.com/dsw6fpqoz/image/upload/v1773659874/obris-libris/rousseau-warrens_cyduya.png"
+          link="como-estudiaba-rousseau"
         />
         <Card
           cardType={styles.art2}
