@@ -1,71 +1,66 @@
-@use './styles/vars';
-@use './styles/header.scss';
-@use './styles/footer.scss';
-@use './styles/about.scss';
-@use './styles/share-button.scss';
-@use './styles/article.scss';
+@use "./styles/vars";
+@use "./styles/header.scss";
+@use "./styles/footer.scss";
+@use "./styles/about.scss";
+@use "./styles/share-button.scss";
+@use "./styles/article.scss";
 
-
-.mainHtml{
+.mainHtml {
   background-color: rgb(17 24 39);
-  color:white;
+  color: white;
 }
 
-.container{
+.container {
   /* font-sizes */
---fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
---fs-800: 3.5rem;
---fs-700: 1.5rem;
---fs-600: 1.4rem;
---fs-500: 1rem;
---fs-400: 0.9375rem;
---fs-300: 1rem;
---fs-200: 0.875rem;}
-
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1.4rem;
+  --fs-500: 1rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+}
 
 @media (min-width: 45rem) {
   .container {
-         /* font-sizes */
-  --fs-800: 5rem;
-  --fs-700: 2.3rem;
-  --fs-600: 1.5rem;
-  --fs-400: 1rem;
-  --fs-500: 1.25rem;
-
-
+    /* font-sizes */
+    --fs-800: 5rem;
+    --fs-700: 2.3rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
   }
 }
 
 @media (min-width: 70rem) {
   .container {
-      --fs-800: 6.25rem;
-      --fs-600: 1.5rem;
-      --fs-400: 1.125rem;
-      --fs-500: 1.75rem;
-
+    --fs-800: 6.25rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.75rem;
   }
 }
 
-.mainContainer{
+.mainContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(17 24 39);
-  color:#fafafa;
+  color: #fafafa;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 15px;
-    width: 95vw;
-    margin: 0 auto;
-    grid-auto-rows: minmax(350px, 400px);
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 15px;
+  width: 95vw;
+  margin: 0 auto;
+  grid-auto-rows: minmax(350px, 400px);
 }
 
-
-.cardStyle{
+.cardStyle {
   background-color: white;
   color: black;
   border-radius: 10px;
@@ -75,10 +70,9 @@
   border: 2px solid gray;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
-
 }
 
-.cardStyle:hover{
+.cardStyle:hover {
   color: red;
 }
 
@@ -90,9 +84,8 @@
   padding: 1rem;
 } */
 
-
-
-.cardContent, .contentVertical{
+.cardContent,
+.contentVertical {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -100,16 +93,14 @@
   gap: 0.5rem;
 }
 
-
-.titleVertical{
+.titleVertical {
   font-size: var(--fs-600);
   font-family: sans-serif;
   font-weight: bold;
   line-height: 2rem;
-
 }
 
-.cardTitle{
+.cardTitle {
   font-family: sans-serif;
   font-weight: bold;
   font-size: var(--fs-600);
@@ -117,7 +108,7 @@
   line-height: 2rem;
 }
 
-.cardText{
+.cardText {
   font-family: sans-serif;
   font-weight: normal;
   font-size: 0.9rem;
@@ -125,57 +116,50 @@
   line-height: 1.3rem;
 }
 
-.imgCard{
+.imgCard {
   width: 100%;
 }
 
-.imgTop{
+.imgTop {
   object-position: top;
 }
-.imgBottom{
+.imgBottom {
   object-position: bottom;
 }
-.imgRight{
+.imgRight {
   object-position: right;
 }
-.imgLeft{
+.imgLeft {
   object-position: left;
 }
 
-.imgCenter{
+.imgCenter {
   object-position: center;
 }
 
-
-
-
-
-
-
-.art1{
+.art1 {
   grid-column: span 12;
 }
 
-.art2{
+.art2 {
   grid-column: span 12;
   grid-row: span 1;
 }
 
-.art3{
+.art3 {
   grid-column: span 12;
 }
 
-.artv{
+.artv {
   grid-row: span 1;
   grid-column: span 12;
 }
 
-.art25{
+.art25 {
   grid-column: span 12;
-  
 }
 
-.cita{
+.cita {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,130 +169,112 @@
   text-align: center;
   border: 1px white solid;
   border-radius: 10px;
-  letter-spacing: 1.2px ;
+  letter-spacing: 1.2px;
   font-size: 1rem;
 }
 
-.link{
+.link {
   text-decoration: none;
   color: white;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
 
-.link:hover{
-  color:red;
+.link:hover {
+  color: red;
 }
 
-.offDecoration{
+.offDecoration {
   text-decoration: none;
 }
 
-.colorRed{
-  color:red;
+.colorRed {
+  color: red;
   transition: color 0.5s ease-in-out;
 }
 
-.colorRed:hover{
-  color:white;
+.colorRed:hover {
+  color: white;
 }
 
-
-
-
-
-
-@media(min-width: 56rem){
-
-  .container{
-      grid-auto-rows: 18rem;
+@media (min-width: 56rem) {
+  .container {
+    grid-auto-rows: 18rem;
   }
 
-
-
-.cardContent, .contentVertical{
-  padding-top: 0;
-    gap:0;
-}
-
-.cardText{
-  font-weight: lighter;
-}
-
-.art1{
-  grid-column: span 6;
-}
-
-.art2{
-  grid-column: span 6;
-
-}
-
-.art25{
-  grid-column: span 6;
-
-
-}
-
-.art3{
-  grid-column: span 12;
-  align-items: center;
-      text-align: center;
-
-} 
-
-.artv{
-  grid-column: span 6;
-  grid-row: span 1;
-
-}
-  
-}
-
-@media (min-width: 60rem){
-  .container{
-      min-width: 60rem;
-      max-width: 80vw;
-      grid-auto-rows: 16rem;
-
+  .cardContent,
+  .contentVertical {
+    padding-top: 0;
+    gap: 0;
   }
 
+  .cardText {
+    font-weight: lighter;
+  }
 
-.contentVertical{
-  justify-content: center;
-text-align: center;}
+  .art1 {
+    grid-column: span 6;
+  }
 
-.cita{
-  font-weight: lighter; 
+  .art2 {
+    grid-column: span 6;
+  }
 
+  .art25 {
+    grid-column: span 6;
+  }
+
+  .art3 {
+    grid-column: span 12;
+    text-align: left;
+  }
+
+  .artv {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
 }
 
-  .art1{
-      grid-row:span 2;
-      grid-column: span 3;
-  }
-  
-  .art2{
-      grid-column: span 6;
-      grid-row: span 1;
-  }
-  
-  .art3{
-      grid-column: span 12;
-      
-  }
-  
-  .artv{
-      grid-row: span 3;
-      grid-column: span 6;
-  }
-  
-  .art25{
-      grid-column: span 8;
-      
+@media (min-width: 60rem) {
+  .container {
+    min-width: 60rem;
+    max-width: 80vw;
+    grid-auto-rows: 16rem;
   }
 
-  .cita{
-      grid-column: span 4;
+  .contentVertical {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cita {
+    font-weight: lighter;
+  }
+
+  .art1 {
+    grid-row: span 2;
+    grid-column: span 3;
+  }
+
+  .art2 {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+
+  .art3 {
+    grid-column: span 12;
+  }
+
+  .artv {
+    grid-row: span 3;
+    grid-column: span 6;
+  }
+
+  .art25 {
+    grid-column: span 8;
+  }
+
+  .cita {
+    grid-column: span 4;
   }
 }

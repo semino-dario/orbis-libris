@@ -28,10 +28,25 @@ export default function Home() {
       <main className={styles.container} style={{ paddingTop: "2rem" }}>
         <Card
           cardType={styles.art2}
-          title="Réquiem para Pablo Artexto"
+          title="Todas las Libres"
+          description="Una historia personal de los primeros años de la librería <strong>La Libre</strong> de Buenos Aires."
+          mainImage="https://res.cloudinary.com/dsw6fpqoz/image/upload/v1774876664/obris-libris/Gemini_Generated_Image_e9vt10e9vt10e9vt_ksplrx.png"
+          link="todas-las-libres"
+        />
+
+        <Card
+          cardType={styles.art2}
+          title="Para Pablo Artexto"
           description="Texto de despedida a un amigo, publicado por primera vez en lalibre.com"
           mainImage="https://res.cloudinary.com/dsw6fpqoz/image/upload/v1773655323/obris-libris/pablo-artexto-1_t17eh4.jpg"
-          link="requiem-para-pablo-artexto"
+          link="para-pablo-artexto"
+        />
+        <Card
+          cardType={styles.art2}
+          title="Competencia versus Concentración"
+          description="Sobre la posible Derogación de la ley del libro en Argentina."
+          mainImage="https://res.cloudinary.com/dsw6fpqoz/image/upload/q_auto/f_auto/v1775049390/obris-libris/2024-07-30_hz6fhb.webp"
+          link="competencia-versus-concentracion"
         />
         <Card
           cardType={styles.art2}
